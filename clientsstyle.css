@@ -1,0 +1,24 @@
+*
+body
+{
+    background-color:antiquewhite;
+
+}
+
+.form label
+{
+    background-color: #04AA6D; 
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left;
+    
+}
+
+.form button
+{
+    border-width: 1px;
+    background-color:aliceblue;
+
+}

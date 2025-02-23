@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+<title>Kindly contact us here</title>
+<link rel="stylesheet" href="contactstyle.css">
+<H1>CONTACT</H1>
+</head>
+<body>
+
+    <h2>Thank You For Contacting Us</h2>
+
+    
+
+<address>
+<a href="mailto:movingpamoja254@gmail.com">CLICK HERE TO EMAIL US</a>.<br><br>
+<b>movingpamoja254@gmail.com ,<br></b>
+<b>Visit us at: Murang'a County ,<br></b>
+<b>Box 564, 456 ,<br></b>
+<b>Kenya.</b>
+</address>
+<button>  <a href="./MovingPamoja.html">Home</a> </button>
+<button>  <a href="./clients.html">Previous</a> </button>
+
+
+</body>
+</html>
+
+<?php
+$db_host= "localhost";
+$db_user= "root";
+$db_pass= "";
+$db_name= "dbclient";
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+if(!$conn){
+  die("connection failed:" . mysqli_connect_error());
+}
+
+//check if the login form has been submitted
+if (isset($_POST['submit'])){
+  
+  //Get the user's login data
+  $email= $_POST['email'];
+  $pass = $_POST['pass'];
+
+
+//SQL query to check data in the database
+$stmt = mysqli_prepare($conn, "SELECT * FROM tb_reg WHERE email=? AND pass=?");
+mysqli_stmt_bind_param($stmt, "ss",$email , $pass);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+
+//Check if the is row with users data
+if (mysqli_num_rows($result) == 1){
+  //Redirect to protected page
+  header("Location: clients.php ");
+  exit();
+} else{
+  //error message
+  echo "Email does not exist";
+}
+//check if the user is already logged in
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+  //If user is already logged in, redirect to protected page
+  header("Location:clients.php");
+  exit();
+}
+}
+
+//close the database connection
+mysqli_close($conn);
+?>
+

@@ -1,0 +1,40 @@
+*
+body
+{
+    background-image:url(call.jpg.jpg);
+    background-size:46%;
+    
+}
+
+
+*
+body{
+  background-image:url(truck.jpg.jpg);
+}
+
+.container{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: rgba(100, 100,111, 0.2) 0px 7px 29px 0px;
+  background-color: blanchedalmond;
+ 
+}
+
+.container h1
+{
+font-size: 20px;
+text-align: center;
+text-transform: uppercase;
+margin: 30px 0;
+background-color: brown;
+color: whitesmoke;
+
+
+}
+
+.form-group{
+  margin-bottom: 10px;
+ 
+
+}

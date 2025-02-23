@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /**********************************
+DIVISIONS CSS
+***********************************/
+#main{
+    margin: auto;
+    width: 100%;
+    float: none;
+    background: silver;
+    border: 1px black;
+}
+#top {
+background-color:gold;
+height: 200px;
+width: 100%;
+text-align: center;
+
+} 
+#left{
+background: rgb(216, 11, 11);
+height: 800px;
+width: 10%;
+float: left;
+}
+#middle{
+background: rgb(238, 235, 235);
+height: 800px;
+width: 80%;
+float: left;
+}
+#right{
+background: rgb(162, 219, 3);
+height: 800px;
+width: 10%;
+float: left;
+}
+#footer{
+background: rgba(143, 158, 179, 0.527);
+height: 500px;
+width: 100%;
+float: left;
+}
+
+/* ************************
+NAVIGATION CSS
+***************************/
+
+nav {
+background-color: rgb(25, 179, 226);
+display: flex;
+justify-content: center;
+}
+
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+nav li {
+flex: 1;
+text-align: center;
+}
+
+nav a {
+color: black;
+display: block;
+padding: 1em;
+text-decoration: none;
+}
+
+nav a:hover {
+background-color: gray;
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<d>, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <div id="main">
+    <div id="top">
+        <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          
+        
+    </div>
+
+    <div id="left">
+        <h1></h1>
+    </div>
+
+    <div id="middle">
+        
+      <form name="register" method="post" action="test.php">
+        <h2><b>Registration Form:</b></h2>
+      
+        <fieldset>
+        <input class="x" type="text" name="idno" placeholder="National ID:" required><br><br>
+        <input class="x" type="text" name="fname" placeholder="First Name:" required><br><br>
+        <input class="x" type="text" name="lname" placeholder="Last Name:" required><br><br>
+        <input class="x" type="email" name="email" placeholder="Email:" required><br><br>
+        <input class="x" type="tel" name="mob" placeholder="Mobile No:" required><br><br>
+        <input class="x" type="number" name="age" placeholder="Age:" min="18" max="120" required><br><br>
+        <input class="x" type="date" name="dd" placeholder="Date:" required><br><br>
+          
+        <fieldset>
+        <p>Select Your Gender</p>
+        <input type="radio" name="gender" value="Male"> Male <br>
+        <input type="radio" name="gender" value="Female"> Female <br>
+        <input type="radio" name="gender" value="other"> Other <br>
+      
+        </fieldset>
+      
+        <p>Select Your Class</p>
+        <select class="x" name="cse" required>
+          <option> </option>
+          <option> BBIT </option>
+          <option> BIT </option>
+          <option> CS </option>		
+        </select><br>
+        <label for="textarea">Write your message here:</label><br>
+        <textarea class="x" rows="5" cols="30" name="sms" placeholder="Write your message here:" required> </textarea><br><br>
+        <input class="x" type="text" name="username" placeholder="Username:" required><br><br>
+        <input class="x" type="password" name="pass" placeholder="Password:" required><br><br><br>
+      
+        <button type="submit"> Register </button>
+      
+      </fieldset>
+      </form>
+    </div>
+
+    <div id="right">
+        <h1></h1>
+    </div>
+
+    <div id="footer">
+        <h1></h1>
+    </div>
+</div>
+</body>
+</html>
